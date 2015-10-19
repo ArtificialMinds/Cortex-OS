@@ -2,7 +2,8 @@
 
 set -e
 
-IMG=raspbian-ua-netinst-`date +%Y%m%d`-git`git rev-parse --short @{0}`.img
+IMG=cortex-`date +%Y%m%d`.img
+echo "$IMG" > current-image.txt
 
 rm -f $IMG
 rm -f $IMG.bz2
@@ -14,6 +15,8 @@ fdisk $IMG <<EOF
 n
 p
 1
+
+
 t
 b
 w
