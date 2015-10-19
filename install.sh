@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -e
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+OLDPWD=$PWD
+cd $DIR
 
 if [ "$#" -ne 1 ]; then
     echo "Error: "
@@ -44,3 +46,10 @@ echo "PRESS CTRL+C NOW IF YOU WANT TO CANCEL!"
 echo "CONTINUING WILL FORMAT THIS DEVICE!"
 sleep 6
 $DIR/flash.sh $1
+
+cd $PWD
+
+sync
+
+echo ""
+echo "Fash complete, please boot Cortex from your device to complete"
