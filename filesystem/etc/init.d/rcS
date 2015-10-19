@@ -1,6 +1,6 @@
 #!/bin/busybox sh
 
-LOGFILE=/tmp/raspbian-ua-netinst.log
+LOGFILE=/tmp/cortex-rcS.log
 
 # default options, can be overriden in installer-config.txt
 preset=server
@@ -131,6 +131,9 @@ echo "Running on Raspberry Pi version ${rpi_hardware_version}"
 echo "================================================="
 echo "https://github.com/ArtificialMinds/cortex-os"
 echo "================================================="
+
+curl https://raw.githubusercontent.com/ArtificialMinds/cortex-os/master/logo.txt
+sleep 5
 
 echo -n "Copying boot files... "
 # copy boot data to safety
@@ -688,8 +691,8 @@ echo " and took $(($DURATION/60)) min $(($DURATION%60)) sec ($DURATION seconds)"
 
 echo -n "Unmounting filesystems... "
 # copy logfile to standard log directory
-cp $LOGFILE /rootfs/var/log/raspbian-ua-netinst.log
-chmod 0640 /rootfs/var/log/raspbian-ua-netinst.log
+cp $LOGFILE /rootfs/var/log/cortex-rcS.log
+chmod 0640 /rootfs/var/log/cortex-rcS.log
 
 umount /rootfs/boot
 umount /rootfs
