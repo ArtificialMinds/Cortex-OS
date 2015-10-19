@@ -132,9 +132,6 @@ echo "================================================="
 echo "https://github.com/ArtificialMinds/cortex-os"
 echo "================================================="
 
-curl https://raw.githubusercontent.com/ArtificialMinds/cortex-os/master/logo.txt
-sleep 5
-
 echo -n "Copying boot files... "
 # copy boot data to safety
 mount $bootpartition /boot || fail
@@ -697,6 +694,8 @@ chmod 0640 /rootfs/var/log/cortex-rcS.log
 umount /rootfs/boot
 umount /rootfs
 echo "OK"
+
+wget -qO- https://raw.githubusercontent.com/ArtificialMinds/cortex-os/master/logo.txt | cat
 
 echo -n "Finished! Rebooting to installed system in 5 seconds..."
 for i in `seq 5 -1 1`; do
