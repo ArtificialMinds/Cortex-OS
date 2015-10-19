@@ -65,6 +65,8 @@ The following packages are required on a host machine to build this distribution
 	code is executed as it is read.  (If a file contains a command to  halt
 	the processor, bc will never read from the standard input.)
 
+The base netinst scripts are tightly based on [debian-pi/raspbian-ua-netinst][debian-pi]
+
 ### Flashing to removal storage
 The whole installation is intended to be automated and unattended. Writing to removable storage like an SD card or USB flash drive will **completely format the storage device, losing anything that was present on the device**, so proceed with caution.
 
@@ -83,3 +85,5 @@ In turn, the install script performs the following individual actions:
 5. `./flash.sh /path/to/device` - flashes the provided device with the disk image.
 
 At this point, the removable storage device can be booted from the end hardware, which must have an internet connection. The OS will boot into the minimal image, then download and expand itself to the Cortex-OS using the numerical scripts within `/script`.
+
+[debian-pi]: https://github.com/debian-pi/raspbian-ua-netinst
