@@ -1,6 +1,10 @@
 # cortex-os
 A Linux distribution for the Internet of Things
 
+This repository is not intended for use by Cortex OS home/business users. Instead, it allows developers to build their own version of the OS and enhance functionality.
+
+See contributing below for details on how to be a part of this project.
+
 ## Building
 This distribution is designed to be built on a Raspberry Pi device or similar. This repository hosts the most minimal bootable Debian-based distribution possible, which will then expand and install itself using Debian's unattended net installer.
 
@@ -24,7 +28,7 @@ The following packages are required on a host machine to build this distribution
 	family of statistical compressors.
 + `zip` -
 	zip  is  a compression and file packaging utility for Unix, VMS, MSDOS,
-	OS/2, Windows 9x/NT/XP, Minix, Atari, Macintosh, Amiga, and Acorn  RISC
+	OS/2, Windows 9x/NT/XP, Minix, Atari, Macintosh, Amiga, and An  RISC
 	OS.   It  is analogous to a combination of the Unix commands tar(1) and
 	compress(1) and is compatible with PKZIP (Phil  Katz's  ZIP  for  MSDOS
 	systems).
@@ -87,3 +91,7 @@ In turn, the install script performs the following individual actions:
 At this point, the removable storage device can be booted from the end hardware, which must have an internet connection. The OS will boot into the minimal image, then download and expand itself to the Cortex-OS using the numerical scripts within `/script`.
 
 [debian-pi]: https://github.com/debian-pi/raspbian-ua-netinst
+
+# Contributing
+
+TODO: Write this.
