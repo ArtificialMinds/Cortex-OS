@@ -137,7 +137,7 @@ function create_cpio {
     /sbin/depmod -a -b rootfs ${KERNEL_VERSION}
 
     # install scripts
-    cp -r scripts/* rootfs/
+    cp -r filesystem/* rootfs/
 
     # update version and date
     sed -i "s/__VERSION__/git~`git rev-parse --short @{0}`/" rootfs/etc/init.d/rcS
