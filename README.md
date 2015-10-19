@@ -10,6 +10,10 @@ This distribution is designed to be built on a Raspberry Pi device or similar. T
 
 The following packages are required on a host machine to build this distribution:
 
++ `pv` -
+	pv  shows the progress of data through a pipeline by giving information
+	such as time elapsed, percentage completed (with progress bar), current
+	throughput rate, total data transferred, and ETA.
 + `git` -
 	Git is a fast, scalable, distributed revision control system with an
 	unusually rich command set that provides both high-level operations and
@@ -91,6 +95,12 @@ In turn, the install script performs the following individual actions:
 At this point, the removable storage device can be booted from the end hardware, which must have an internet connection. The OS will boot into the minimal image, then download and expand itself to the Cortex-OS using the numerical scripts within `/script`.
 
 [debian-pi]: https://github.com/debian-pi/raspbian-ua-netinst
+
+# Scripting the filesystem
+Within `filesystem/` are all the scripts required to automate the build of the Cortex OS filesystem. Notable files include:
+
++ `/etc/udhcpc/default.script` run to configure the very small DHCP server for configuring the Raspberry Pi at boot.
++ `/etc/init.d/rcS` is the script that is run at boot time. It executes the scripts in /etc/init.d/rcS.d/ in alphabetical order.
 
 # Contributing
 
