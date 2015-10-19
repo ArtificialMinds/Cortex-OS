@@ -2,8 +2,7 @@
 
 set -e
 
-IMG=cortex-`date +%Y%m%d`.img
-echo "$IMG" > current-image.txt
+IMG=cortex-os.img
 
 rm -f $IMG
 rm -f $IMG.bz2
