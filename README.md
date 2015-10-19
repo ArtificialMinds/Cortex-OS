@@ -73,3 +73,13 @@ Once cloning this repository to your host computer and installing the required p
 ```
 ./install.sh /path/to/device
 ```
+
+In turn, the install script performs the following individual actions:
+
+1. `./clean.sh` - removes any downloaded content from previous installations.
+2. `./download.sh` - downloads the source packages for building the base image.
+3. `./build.sh` - builds the initial RAM file system (initramfs).
+4. `./image.sh` - builds the initramfs archive into a raw and compressed disk image.
+5. `./flash.sh /path/to/device` - flashes the provided device with the disk image.
+
+At this point, the removable storage device can be booted from the end hardware, which must have an internet connection. The OS will boot into the minimal image, then download and expand itself to the Cortex-OS using the numerical scripts within `/script`.
