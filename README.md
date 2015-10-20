@@ -102,6 +102,8 @@ Within `filesystem/` are all the scripts required to automate the build of the C
 + `/etc/udhcpc/default.script` run to configure the very small DHCP server for configuring the Raspberry Pi at boot.
 + `/etc/init.d/rcS` is the script that is run at boot time. It executes the scripts in /etc/init.d/rcS.d/ in alphabetical order.
 
+Video to demonstrate build process: https://www.youtube.com/watch?v=hUAfh9p7IZE
+
 # Contributing
 
 TODO: Write this.
