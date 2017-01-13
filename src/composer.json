@@ -1,0 +1,10 @@
+{
+	"name": "artificialminds/cortex-os",
+	"description": "A Linux distribution for the Internet of Things.",
+	"type": "project",
+	"license": "MIT",
+	"require": {
+		"artificialminds/neuron": "dev-master",
+		"netbixx/wiring-pi-php": "dev-master"
+	},
+}

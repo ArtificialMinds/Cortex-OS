@@ -1,0 +1,34 @@
+[
+    {
+        "name": "netbixx/wiring-pi-php",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/terbach/WiringPiPHP.git",
+            "reference": "30167e099378afe328b9d2dc1951d0fd5e1c0b8c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/terbach/WiringPiPHP/zipball/30167e099378afe328b9d2dc1951d0fd5e1c0b8c",
+            "reference": "30167e099378afe328b9d2dc1951d0fd5e1c0b8c",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.3"
+        },
+        "require-dev": {
+            "phpunit/phpunit": ">=4.1.5"
+        },
+        "time": "2014-08-08 11:11:56",
+        "type": "project",
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "description": "A PHP class-wrapper for the wiringPi-PHP implementation."
+    }
+]

@@ -1,0 +1,51 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "3f49cb9ff54fe5b76845d083162077d4",
+    "content-hash": "cd0558e04b0891a7bcb4b0d0543e8c63",
+    "packages": [],
+    "packages-dev": [
+        {
+            "name": "netbixx/wiring-pi-php",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/terbach/WiringPiPHP.git",
+                "reference": "30167e099378afe328b9d2dc1951d0fd5e1c0b8c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/terbach/WiringPiPHP/zipball/30167e099378afe328b9d2dc1951d0fd5e1c0b8c",
+                "reference": "30167e099378afe328b9d2dc1951d0fd5e1c0b8c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": ">=4.1.5"
+            },
+            "type": "project",
+            "autoload": {
+                "psr-0": {
+                    "": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "A PHP class-wrapper for the wiringPi-PHP implementation.",
+            "time": "2014-08-08 11:11:56"
+        }
+    ],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "netbixx/wiring-pi-php": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

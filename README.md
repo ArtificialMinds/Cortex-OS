@@ -1,12 +1,12 @@
-# cortex-os
-A Linux distribution for the Internet of Things
+# A Linux distribution for the Internet of Things.
 
-This repository is not intended for use by Cortex OS home/business users. Instead, it allows developers to build their own version of the OS and enhance functionality.
+This repository is intended for use by Cortex-OS developers, to build your own version of the OS and enhance functionality.
 
 See contributing below for details on how to be a part of this project.
 
 ## Building
-This distribution is designed to be built on a Raspberry Pi device or similar. This repository hosts the most minimal bootable Debian-based distribution possible, which will then expand and install itself using Debian's unattended net installer.
+
+The distribution is designed to be built on a Raspberry Pi device or compatible. This repository hosts the most minimal bootable Debian-based distribution possible, which will then expand and install itself using Debian's unattended net installer.
 
 The following packages are required on a host machine to build this distribution:
 
@@ -73,9 +73,10 @@ The following packages are required on a host machine to build this distribution
 	code is executed as it is read.  (If a file contains a command to  halt
 	the processor, bc will never read from the standard input.)
 
-The base netinst scripts are tightly based on [debian-pi/raspbian-ua-netinst][debian-pi]
+The base netinst scripts are tightly based on [debian-pi/raspbian-ua-netinst][debian-pi].
 
-### Flashing to removal storage
+# Flashing to removal storage
+
 The whole installation is intended to be automated and unattended. Writing to removable storage like an SD card or USB flash drive will **completely format the storage device, losing anything that was present on the device**, so proceed with caution.
 
 Once cloning this repository to your host computer and installing the required packages as described above, run the following as root:
@@ -96,14 +97,24 @@ At this point, the removable storage device can be booted from the end hardware,
 
 [debian-pi]: https://github.com/debian-pi/raspbian-ua-netinst
 
-# Scripting the filesystem
-Within `filesystem/` are all the scripts required to automate the build of the Cortex OS filesystem. Notable files include:
+# Editing the filesystem
+
+Within `filesystem/` are all the scripts required to automate the build of the Cortex-OS filesystem. Notable files include:
 
 + `/etc/udhcpc/default.script` run to configure the very small DHCP server for configuring the Raspberry Pi at boot.
 + `/etc/init.d/rcS` is the script that is run at boot time. It executes the scripts in /etc/init.d/rcS.d/ in alphabetical order.
 
 Video to demonstrate build process: https://www.youtube.com/watch?v=hUAfh9p7IZE
 
+## Developing devices
+
+Once the OS is built, devices can be developed and hooked up to [Neuron][neuron]. [Read the wiki][wiki] for more information.
+
 # Contributing
 
-TODO: Write this.
+Would you like to add new functionality to Cortex-OS? You can introduce device capability by adding a new device directory within `/src`. Scripts within that directory need to implement the `Device` interface. They are executed when networking is connected or disconnected, allowing devices to continue to operate while there is no Internet availability.
+
+Read [the wiki][wiki] for more information and a guide to write your own device.
+
+[neuron]: https://github.com/ArtificialMinds/Neuron
+[wiki]: https://github.com/ArtificialMinds/Cortex-OS/wiki
